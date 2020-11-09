@@ -1,3 +1,5 @@
+package user;
+
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;

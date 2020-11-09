@@ -1,3 +1,6 @@
+package user;
+
+import Utils.JDBCUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -28,7 +31,7 @@ public class UserDao {
         try {
             // 编写sql语句: 添加一行数据
             String sql = "select * from t_user where username = ?";
-//            User user = template.queryForObject(sql, new BeanPropertyRowMapper<>(User.class),
+//            user.User user = template.queryForObject(sql, new BeanPropertyRowMapper<>(user.User.class),
 //                    registUser.getUsername());
             List<User> list = template.query(sql, new BeanPropertyRowMapper<>(User.class), registUser.getUsername());
             if (list.size() > 0) {
