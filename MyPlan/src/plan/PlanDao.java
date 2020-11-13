@@ -4,6 +4,7 @@ import Utils.JDBCUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.Date;
 import java.util.List;
 
 public class PlanDao {
@@ -40,9 +41,16 @@ public class PlanDao {
 
     public Boolean addTime(Plan plan) {
         try {
+            Date date = new Date();
+
             // 编写sql语句: 更新一行数据
-            String sql = "update myPlan set totalMinutes = ?, count = ? where name = ?";
-            template.update(sql, plan.getTotalMinutes(), plan.getCount(), plan.getName());
+            String sql = "update myPlan set totalMinutes = ?, count = ?, updateTime = ? where name = ?";
+            template.update(sql, plan.getTotalMinutes(), plan.getCount(), date.toString(), plan.getName());
+
+            String s = (new Date()).toString();
+            sql = "insert into myPlanHistory (planName, createTime, duration) values (?, ?, ?)";
+            template.update(sql, plan.getName(), s, plan.getDuration());
+
             return true;
         } catch (Exception e) {
             System.out.println(e);
@@ -55,6 +63,21 @@ public class PlanDao {
             // 编写sql语句: 添加一行数据
             String sql = "select * from myPlan";
             List<Plan> list = template.query(sql, new BeanPropertyRowMapper<>(Plan.class));
+            if (list.size() > 0) {
+                return list;
+            }
+            return null;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+    }
+
+    public List<Plan> getPlanHistyory(String planName) {
+        try {
+            // 编写sql语句: 添加一行数据
+            String sql = "select * from myPlanHistory where planName = ?";
+            List<Plan> list = template.query(sql, new BeanPropertyRowMapper<>(Plan.class), planName);
             if (list.size() > 0) {
                 return list;
             }
