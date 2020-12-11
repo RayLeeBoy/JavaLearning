@@ -7,14 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="581ffcb6-59a7-4485-ac26-8174dc824161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyMaven/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plan/PlanHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plan/PlanHistoryGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plan/PlanFinished.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plan/PlanGetFinishedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/Plan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/Plan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/PlanAddTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/PlanAddTime.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/PlanDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyPlan_war_exploded/WEB-INF/classes/plan/PlanDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyPlan/plan/Plan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyPlan/plan/Plan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyPlan/plan/PlanAddTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyPlan/plan/PlanAddTime.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyPlan/plan/PlanDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyPlan/plan/PlanDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plan/Plan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plan/Plan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plan/PlanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plan/PlanDao.java" afterDir="false" />
@@ -71,7 +68,8 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Utils" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
@@ -79,8 +77,7 @@
       <recent name="plan" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Utils" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
@@ -202,7 +199,9 @@
       <workItem from="1604905619027" duration="6937000" />
       <workItem from="1604978368171" duration="3695000" />
       <workItem from="1604989344900" duration="5551000" />
-      <workItem from="1605247132800" duration="270000" />
+      <workItem from="1605247132800" duration="687000" />
+      <workItem from="1605510995801" duration="1720000" />
+      <workItem from="1607316485984" duration="3593000" />
     </task>
     <servers />
   </component>
@@ -221,5 +220,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/plan/PlanDao.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

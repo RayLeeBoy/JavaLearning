@@ -12,6 +12,16 @@ public class Plan {
     private String createTime;
     private String color;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status;
+
     public String getCreateTime() {
         return createTime;
     }

@@ -58,10 +58,39 @@ public class PlanDao {
         }
     }
 
+    public Boolean finished(Plan plan) {
+        try {
+            Date date = new Date();
+
+            // 编写sql语句: 更新一行数据
+            String sql = "update myPlan set status = ? where name = ?";
+            template.update(sql, plan.getStatus(), plan.getName());
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        }
+    }
+
     public List<Plan> get() {
         try {
             // 编写sql语句: 添加一行数据
-            String sql = "select * from myPlan";
+            String sql = "select * from myPlan where status = '0'";
+            List<Plan> list = template.query(sql, new BeanPropertyRowMapper<>(Plan.class));
+            if (list.size() > 0) {
+                return list;
+            }
+            return null;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+    }
+
+    public List<Plan> getFinishedPlan() {
+        try {
+            // 编写sql语句
+            String sql = "select * from myPlan where status = '1'";
             List<Plan> list = template.query(sql, new BeanPropertyRowMapper<>(Plan.class));
             if (list.size() > 0) {
                 return list;
